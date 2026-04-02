@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pyannote.audio==3.1.1
+openai-whisper
+torch
+torchaudio
+pydub
+python-multipart
+httpx
+python-dotenv
+supabase
+ffmpeg-python
