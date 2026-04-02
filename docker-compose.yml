@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  mentaury-worker:
+    build: .
+    container_name: mentaury-worker
+    restart: unless-stopped
+    ports:
+      - "3020:3020"
+    env_file:
+      - .env
+    volumes:
+      - ./temp_audio:/app/temp_audio
+    mem_limit: 4g
+    cpus: "3"
+```
+
+---
+
+### ARQUIVO 4 de 5 — `.env.example`
+
+Nome exato: `.env.example`
+```
+HF_TOKEN=seu_token_huggingface_aqui
+VPS_WORKER_SECRET=seu_secret_aqui
+SUPABASE_URL=https://xxxx.supabase.co
+SUPABASE_SERVICE_KEY=sua_service_role_key_aqui
+PORT=3020
